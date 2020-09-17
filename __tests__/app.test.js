@@ -10,13 +10,13 @@ describe('AQ email routes', () => {
     const response = await request(app)
       .post('/api/v1/air-quality')
       .send({
-        userPhoneNumber:'240-565-9921',
+        userPhoneNumber:'240-858-5858',
         userLocation: 'Portland, Oregon, US'
       });
 
     expect(response.body).toEqual({
       jobId: expect.any(String),
-      userPhoneNumber:'240-565-9921',
+      userPhoneNumber:'240-858-5858',
       userLocation: 'Portland, Oregon, US'
     });
   });

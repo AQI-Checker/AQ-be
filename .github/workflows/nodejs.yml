@@ -28,4 +28,5 @@ jobs:
         WEATHER_BIT_API_KEY: ${{ secrets.WEATHER_BIT_API_KEY }}
         ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
         AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        
 
