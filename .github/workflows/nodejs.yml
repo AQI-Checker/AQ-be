@@ -10,7 +10,6 @@ jobs:
         env:
           POSTGRES_USER: alchemy
           POSTGRES_PASSWORD: alchemy
-            redis:
       redis:
         image: redis
         options: >-
