@@ -26,3 +26,7 @@ jobs:
         DATABASE_URL: postgres://alchemy:alchemy@postgres:5432/alchemy
         REDIS_URL: redis://redis:6379
         WEATHER_BIT_API_KEY: ${{ secrets.WEATHER_BIT_API_KEY }}
+        ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        
+
