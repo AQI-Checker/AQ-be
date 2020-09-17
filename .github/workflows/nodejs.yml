@@ -1,5 +1,4 @@
 name: Jest Tests
-
 on: [push]
 jobs:
   build:
@@ -11,6 +10,14 @@ jobs:
         env:
           POSTGRES_USER: alchemy
           POSTGRES_PASSWORD: alchemy
+            redis:
+      redis:
+        image: redis
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
     - uses: actions/checkout@v2
     - run: npm ci
@@ -18,3 +25,4 @@ jobs:
       env:
         CI: true
         DATABASE_URL: postgres://alchemy:alchemy@postgres:5432/alchemy
+        REDIS_URL: redis://redis:6379
